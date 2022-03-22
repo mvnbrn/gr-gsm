@@ -378,8 +378,8 @@ blocks:
     coordinate: [1016, 148.0]
     rotation: 0
     state: enabled
-- name: network_socket_pdu_0
-  id: network_socket_pdu
+- name: blocks_socket_pdu_0
+  id: blocks_socket_pdu
   parameters:
     affinity: ''
     alias: ''
@@ -398,8 +398,8 @@ blocks:
     coordinate: [1528, 172.0]
     rotation: 0
     state: true
-- name: network_socket_pdu_1
-  id: network_socket_pdu
+- name: blocks_socket_pdu_1
+  id: blocks_socket_pdu
   parameters:
     affinity: ''
     alias: ''
@@ -990,15 +990,15 @@ connections:
 - [blocks_rotator_cc_0, '0', qtgui_freq_sink_x_0, '0']
 - [gsm_bcch_ccch_demapper_0, bursts, gsm_control_channels_decoder_0, bursts]
 - [gsm_clock_offset_control_0, ctrl, gsm_input_0, ctrl_in]
-- [gsm_control_channels_decoder_0, msgs, network_socket_pdu_1, pdus]
-- [gsm_control_channels_decoder_0_0, msgs, network_socket_pdu_1, pdus]
+- [gsm_control_channels_decoder_0, msgs, blocks_socket_pdu_1, pdus]
+- [gsm_control_channels_decoder_0_0, msgs, blocks_socket_pdu_1, pdus]
 - [gsm_decryption_0, bursts, gsm_control_channels_decoder_0_0, bursts]
 - [gsm_input_0, '0', gsm_receiver_0, '0']
 - [gsm_receiver_0, C0, gsm_bcch_ccch_demapper_0, bursts]
 - [gsm_receiver_0, C0, gsm_sdcch8_demapper_0, bursts]
 - [gsm_receiver_0, measurements, gsm_clock_offset_control_0, measurements]
 - [gsm_sdcch8_demapper_0, bursts, gsm_decryption_0, bursts]
-- [network_socket_pdu_0, pdus, gsm_message_printer_1, msgs]
+- [blocks_socket_pdu_0, pdus, gsm_message_printer_1, msgs]
 - [rtlsdr_source_0, '0', blocks_rotator_cc_0, '0']
 - [soapy_custom_source_0, '0', blocks_rotator_cc_0, '0']
 
