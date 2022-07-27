@@ -50,4 +50,4 @@ GR_PYTHON_INSTALL(
 # The add_dependencies(...) is very important for the parallel build `make -j $(nproc)`
 # The `pygen_apps` target is generated in GR_PYTHON_INSTALL function which calls
 # GR_UNIQUE_TARGET that we redefine in GrccCompile.
-add_dependencies(pygen_apps gsm_python)
+add_dependencies(pygen_apps gsm_python copy_module_for_tests)
