@@ -619,7 +619,7 @@ def do_scan(samp_rate, band, speed, ppm, gain, args, prn=None, debug=False):
                 mncs = numpy.array(scanner.gsm_extract_system_info.get_mnc())
                 ccch_confs = numpy.array(scanner.gsm_extract_system_info.get_ccch_conf())
                 powers = numpy.array(scanner.gsm_extract_system_info.get_pwrs())
-                assignment_arfcns = numpy.array(scanner.extract_immediate_assignment.get_arfcns())
+                assignment_arfcns = numpy.array(scanner.extract_immediate_assignment.get_arfcn_ids())
                 assignment_tseqs = numpy.array(scanner.extract_immediate_assignment.get_tseqs())
                 assignment_maios = numpy.array(scanner.extract_immediate_assignment.get_maios())
                 assignment_hsns = numpy.array(scanner.extract_immediate_assignment.get_hsns())
