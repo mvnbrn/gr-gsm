@@ -30,7 +30,7 @@ def get_devices(hint=""):
 def match(dev, filters):
     for f in filters:
         for k, v in f.items():
-            if (k not in dev or dev[k] != v):
+            if (k not in dev.to_string() or v not in dev.to_string()):
                 break
         else:
             return True
